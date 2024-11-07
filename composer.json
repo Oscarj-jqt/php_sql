@@ -1,0 +1,16 @@
+{
+    "name": "oj/classicmodels",
+    "description": "Une application php lié à une base de donnée SQL",
+    "autoload": {
+        "psr-4": {
+            "Oj\\Classicmodels\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oscarj-jqt",
+            "email": "jacquetoscar0@gmail.com"
+        }
+    ],
+    "require": {}
+}
