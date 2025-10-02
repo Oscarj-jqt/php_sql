@@ -1,0 +1,3 @@
+on va ajouter une props taille (S, M, L) qui va faire varier les prix, ne serait-il pas mieux alors de ne pas l'ajouter dans la classe Drink 
+mais d'en faire une classe/sous-classe/abstraite/interface en respectant les principes SOLID ainsi on n'a pas à modifier la classe Drink
+et cela nous permet d'ajouter des nouvelles fonctionnalités qu'en penses-tu ?
