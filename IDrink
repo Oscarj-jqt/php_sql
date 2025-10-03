@@ -1,0 +1,7 @@
+<?php 
+
+// interface permettant de définir les méthodes communes à toutes les boissons. (getPrice, display())
+interface IDrink {
+    public function getPrice(): float;
+    public function display(): void;
+}
