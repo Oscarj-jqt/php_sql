@@ -2,36 +2,3 @@ on va ajouter une props taille (S, M, L) qui va faire varier les prix, ne serait
 mais d'en faire une classe/sous-classe/abstraite/interface en respectant les principes SOLID ainsi on n'a pas à modifier la classe Drink
 et cela nous permet d'ajouter des nouvelles fonctionnalités qu'en penses-tu ?
 
-<?php
-
-spl_autoload_register(function ($class) 
-{
-    if( file_exists($class.'.php') == true ) 
-        include $class.'.php';
-});
-
-$tea = new Tea(Drink::SIZE_LARGE);
-var_dump($tea->getPrice());
-
-<?php
-
-class Drink{
-
-    public const SIZE_SMALL = 0;
-    public const SIZE_MEDIUM = 1;
-    public const SIZE_LARGE = 2;
-
-    private string $name;
-    private float $price;
-    protected int $size;
-
-    public function __construct(string $name, int $price, int $size){
-        $this->name = $name;
-        $this->price = $price;
-        $this->size = $size;
-    }
-
-    public function getPrice() : float {
-        return $this->price;
-    }
-}
