@@ -1,0 +1,101 @@
+Toute ce concept d'archirecture visant à améliorer la maintenabilité, réutilisabilité, coûts est notamment dûe au travail de C. Alexander et son livre 
+"The Timeless way of building" qui renvoit donc à "La manière intemporelle de construire"
+
+Il introduit la notion "Design Pattern" décrit à la couverture par "Objets orientés ,éléments réuilisables" définis par :
+
+"Each pattern describes a problem which occurs over and over again
+in our environment, and then describes the core of the solution to
+that problem, in such a way that you can use this solution a million
+times over, without ever doing it the same way twice"
+
+Popularisé avec le GoF (1995)
+
+Synthèse :
+
+Synthèse : Design Patterns (Patrons de conception)
+🏗️ Origine et définition
+
+Concept inspiré de l’architecture (Christopher Alexander, The Timeless Way of Building, 1979).
+
+Démocratisé en 1995 par le Gang of Four (GoF).
+
+Un design pattern décrit un problème récurrent de conception et une solution générique réutilisable.
+
+Ce n’est pas un algorithme, mais une architecture adaptable qui respecte les bonnes pratiques de POO.
+
+Objectif : réutilisabilité, maintenabilité, réduction des coûts et cohérence du code.
+
+
+Exemples de patterns courants
+🧠 Strategy
+
+Problème : Modifier dynamiquement un comportement ou un algorithme.
+
+Solution : Déléguer la partie variable à une classe via une interface commune.
+
+Exemple : Choisir dynamiquement un mode de paiement ou un calcul de frais.
+
+👉 Catégorie : Behavioral.
+
+🔒 Singleton
+
+Problème : Garantir une instance unique d’une classe.
+
+Solution : Constructeur privé + méthode statique getInstance().
+
+Exemple : Connexion base de données.
+
+👉 Catégorie : Creational.
+
+Instance globale :
+C’est un objet accessible partout dans le programme. Il n’existe qu’un seul exemplaire de cette classe, utilisé par tous.
+
+Constructeur privé :
+Le constructeur sert à créer un objet. S’il est privé, personne ne peut créer un nouvel objet directement avec new.
+
+Méthode statique retournant l’instance unique :
+On crée une méthode spéciale (statique) qui vérifie si l’objet existe déjà. Si non, elle le crée. Sinon, elle retourne l’objet déjà créé.
+Ainsi, on a toujours le même objet partout
+
+🏭 Factory
+
+Problème : Créer des objets sans dépendre de leurs classes concrètes.
+
+Solution : Déléguer la création à une classe Factory.
+
+But : Réduire le couplage fort.
+
+Exemple : DatabaseFactory::create("mysql").
+
+👉 Catégorie : Creational.
+
+
+🎨 Decorator
+
+Problème : Ajouter dynamiquement de nouvelles fonctionnalités sans modifier le code d’origine.
+
+Solution : Encapsuler un objet dans d’autres objets décorateurs.
+
+Principe : Respecte le principe SOLID (Open/Closed).
+
+Exemple : Ajouter des options à un produit (ex : café + lait + sucre).
+
+👉 Catégorie : Structural.
+
+
+
+🧭 MVC (Model-View-Controller)
+
+Problème : Séparer la logique, l’affichage et les interactions utilisateur.
+
+Solution :
+
+Model : Données et logique métier
+
+View : Interface et affichage
+
+Controller : Gère les actions utilisateur
+
+Exemples : Laravel, Symfony, frameworks PHP.
+
+👉 Pattern d’architecture complet
